@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+section {
+    padding: 2rem;
+}
+
+.heading {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.view-all {
+    display: block;
+    margin-top: 2rem;
+    background-color: white;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: .8rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header p {
+    position: absolute;
+    top: 130px;
+    left: 20px;
+}
+
+header .fa {
+    font-size: 2.4rem;
+    color: grey;
+}
+
+header p {
+    color: grey;
+}
+
+header .fa-bars {
+    position: absolute;
+    top: 130px;
+    right: 20px;
+}
+
+.logo {
+    width: 10rem;
+}
+
+nav {
+    background-color: dodgerblue;
+    position: absolute;
+    width: 80%;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .5s;
+}
+
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.active {
+    height: 27rem;
+}
+
+.bars-top {
+    z-index: 110;
+}
+
+/* Sections */
+.banner {
+    background-image: url("../images/bg.jpeg");
+    height: 500px;
+    background-position: center;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner div {
+    color: white;
+    text-align: center;
+}
+
+.banner div h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.banner div p {
+    color: yellow;
+}
+
+/* section-form */
+.section-form {
+    background-color: white;
+    position: relative;
+    top: -100px;
+    width: 90%;
+    margin: auto;
+}
+
+.section-form form input,
+select {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(202, 200, 200);
+}
+
+.section-form label {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.section-form input[type="submit"] {
+    padding: 2rem 2rem;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 10px 30px rgb(219, 176, 243);
+    background-image: linear-gradient(to right, rgb(170, 74, 226), rgb(101, 232, 255));
+}
+
+
+/* Welcome */
+.welcome {
+    border-bottom: 1px solid lightgray;
+    background: rgb(228, 226, 226);
+}
+
+.welcome section div {
+    margin-bottom: 2rem;
+}
+
+.welcome > p {
+    text-align: center;
+    padding: 2rem;
+}
+
+.welcome section .fa {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.welcome section h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+/* GALLERY */
+.gallery {
+    border-bottom: 1px solid lightgrey;
+}
+
+.gallery > p {
+    text-align: center;
+    padding: 2rem;
+}
+
+.gallery > section {
+    background-color: rgb(246, 237, 237);
+}
+
+.gallery > section section:first-child div {
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.gallery section:first-child div img {
+    width: 100%;
+    transition: all .5s;
+}
+
+.gallery > section section:first-child div:hover img {
+    transform: scale(1.2);
+}
+
+.gallery section h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.picture-words {
+    background: black;
+    color: white;
+}
+
+.picture-words section h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.picture-words section p {
+    margin-bottom: 2rem;
+}
+
+.picture-words section p a {
+    color: rgb(6, 192, 234);
+}
+
+.small {
+    font-size: 1.4rem;
+}
+
+.picture-words section video {
+    width: 100%;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width:778px) {
+    .section-form form {
+        display: flex;
+    }
+
+    .section-form form div,
+    .section-form form input[type="submit"] {
+        flex: 1;
+        margin: .5rem;
+    }
+
+    .welcome > section {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .welcome > section div {
+        flex-basis: 22%;
+    }
+
+    .gallery > section section:first-child {
+        display: flex;
+    }
+
+    .gallery > section section:first-child div {
+        margin: 1rem;
+    }
+
+    .gallery > section section:nth-child(2) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gallery > section section:nth-child(2) div {
+        flex-basis: 70%;
+    }
+
+    .gallery > section section:nth-child(2) .view-all {
+        flex-basis: 25%;
+    }
+
+    .picture-words {
+        display: flex;
+    }
+
+    .view-all {
+        display: inline-block;
+    }
+}
